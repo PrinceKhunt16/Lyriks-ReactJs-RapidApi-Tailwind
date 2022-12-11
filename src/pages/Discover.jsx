@@ -10,7 +10,7 @@ export default function Discover() {
 
   return (
     <div className='flex flex-col'>
-      <div className='w-full flex justify-between items-center sm:flex-row flex-col mt-4 mb-10'>
+      {/* <div className='w-full flex justify-between items-center sm:flex-row flex-col mt-4 mb-10'>
         <h2 className='font-normal font-noto text-3xl text-white text-left'>Discover {genereTitle}</h2>
         <select
           onChange={() => {}}
@@ -23,8 +23,8 @@ export default function Discover() {
             </option>
           )}
         </select>
-      </div>
-      <div className="flex flex-wrap sm:justify-start justify-center gap-8">
+      </div> */}
+      <div className="grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8">
         {data?.map((song, i) => (
           <SongCard
             key={song.key}
