@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Track({ isPlaying, isActive, activeSong }) {
   return (
-    <div className="flex-1 flex items-center justify-start">
-      <div className={`${isPlaying && isActive ? 'animate-[spin_10s_linear_infinite]' : ''} hidden sm:block h-16 w-16 mr-4`}>
+    <div className="hidden pl-[7px] md:flex flex-1 items-center justify-start">
+      <div className={`${isPlaying && isActive ? 'animate-[spin_10s_linear_infinite]' : ''} block h-16 w-16 mr-2`}>
         <img src={activeSong?.images?.coverart} alt="cover art" className="rounded-full" />
       </div>
       <div className="w-[50%] hidden md:block">

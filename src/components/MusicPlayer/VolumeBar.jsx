@@ -7,7 +7,7 @@ export default function VolumeBar({ value, min, max, onChange, setVolume }) {
   }, [value])
 
   return (
-    <div className="flex flex-1 items-center justify-end">
+    <div className="hidden md:flex flex-1 items-center justify-end">
       {value <= 1 && value > 0 && <CiVolumeHigh size={25} color="#8d83b2" onClick={() => setVolume(0)} />}
       {value == 0 && <CiVolumeMute size={25} color="#8d83b2" onClick={() => setVolume(1)} />}
       <input
