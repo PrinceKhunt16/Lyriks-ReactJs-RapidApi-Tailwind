@@ -26,11 +26,11 @@ module.exports = {
           to: { opacity: 1 },
         },
         slideup: {
-          from: { opacity: 0, transform: 'translateY(25%)' },
+          from: { opacity: 0, transform: 'translateY(20px)' },
           to: { opacity: 1, transform: 'none' },
         },
         slidedown: {
-          from: { opacity: 0, transform: 'translateY(-25%)' },
+          from: { opacity: 0, transform: 'translateY(-20px)' },
           to: { opacity: 1, transform: 'none' },
         },
         slideleft: {
