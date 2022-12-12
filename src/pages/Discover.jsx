@@ -1,29 +1,23 @@
-import { Error, Loader, SongCard } from '../components'
-import { genres } from '../assets/constans'
+import { SongCard } from '../components'
 import { useGetTopChartsQuery } from '../redux/services/shazamCore'
 import { useSelector } from 'react-redux';
+import PreviewCard from '../components/PreviewCard';
 
 export default function Discover() {
   const { data } = useGetTopChartsQuery()
   const { activeSong, isPlaying } = useSelector((state) => state.player)
-  const genereTitle = 'Pop'
 
   return (
     <div className='flex flex-col'>
-      {/* <div className='w-full flex justify-between items-center sm:flex-row flex-col mt-4 mb-10'>
-        <h2 className='font-normal font-noto text-3xl text-white text-left'>Discover {genereTitle}</h2>
-        <select
-          onChange={() => {}}
-          value={''}
-          className="bg-black text-gray-300 p-3 text-sm rounded-lg outline-none sm:mt-0 mt-5"
-        >
-          {genres.map((genre) => 
-            <option key={genre.value} value={genre.value}>
-              {genre.title}
-            </option>
-          )}
-        </select>
-      </div> */}
+      <div className="grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8">
+        {data === undefined &&
+          <>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24].map((i) => (
+              <PreviewCard key={i} />
+            ))}
+          </>
+        }
+      </div>
       <div className="grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8">
         {data?.map((song, i) => (
           <SongCard

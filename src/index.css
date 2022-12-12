@@ -94,3 +94,20 @@ input[type=range]::-webkit-slider-runnable-track  {
   border: none;
   background: transparent;
 }
+
+.child {
+  height: 100%;
+  width: 50px;
+  background: #393755;
+  animation: left-to-right 1.5s ease-out forwards infinite;
+}
+
+@keyframes left-to-right {
+  0% {
+    width: 50px;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
