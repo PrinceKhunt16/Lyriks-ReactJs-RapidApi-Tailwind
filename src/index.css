@@ -99,7 +99,7 @@ input[type=range]::-webkit-slider-runnable-track  {
   height: 100%;
   width: 50px;
   background: #393755;
-  animation: left-to-right 1.5s ease-out forwards infinite;
+  animation: left-to-right 1s ease-out forwards infinite;
 }
 
 @keyframes left-to-right {
